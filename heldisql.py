@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+
 import httpx
 from bs4 import BeautifulSoup
+from utils import v2tuple, version_key, SimpleVersion
 
 class HeldiSqlScrape:
     def __init__(self):
@@ -17,9 +19,7 @@ class HeldiSqlScrape:
         version_map = {}
         import re
         def version_in_range(version):
-            def v2tuple(v):
-                return tuple(map(int, v.lstrip('v').split('.')))
-            return v2tuple(self.min_version) <= v2tuple(version) <= v2tuple(self.max_version)
+            return v2tuple(self.min_version.lstrip('v')) <= v2tuple(version.lstrip('v')) <= v2tuple(self.max_version.lstrip('v'))
 
         for li in releases:
             li_text = li.get_text()
@@ -49,9 +49,7 @@ class HeldiSqlScrape:
         # Only include versions in the min-max range
         if text.startswith("v12."):
             version = text.split()[0]
-            def v2tuple(v):
-                return tuple(map(int, v.lstrip('v').split('.')))
-            if v2tuple(self.min_version) <= v2tuple(version) <= v2tuple(self.max_version):
+            if v2tuple(self.min_version.lstrip('v')) <= v2tuple(version.lstrip('v')) <= v2tuple(self.max_version.lstrip('v')):
                 return True
         return False
 
@@ -98,9 +96,22 @@ class HeldiSqlScrape:
 import json
 result = HeldiSqlScrape().scrape()
 if result:
-    # Output as JSON: { version: { '32bit': url, '64bit': url } }
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+    # Transform to requested format
+    releases = []
+    for v, downloads in sorted(result.items(), key=lambda x: v2tuple(x[0].lstrip('v')), reverse=True):
+        releases.append({
+            "version": v.lstrip('v'),
+            "downloads": downloads
+        })
+    latest_version = releases[0]["version"] if releases else None
+    output = {
+        "name": "heidisql",
+        "latest_version": latest_version,
+        "releases": releases
+    }
+    print(json.dumps(output, indent=2, ensure_ascii=False))
+    # Write JSON to assets/heldisql.json
+    with open("assets/heldisql.json", "w", encoding="utf-8") as jf:
+        json.dump(output, jf, indent=2, ensure_ascii=False)
 else:
     print(json.dumps({"error": "No portable releases found or connection error."}, ensure_ascii=False))
-with open("test2.txt", "w", encoding="utf-8") as f:
-    f.write(str(result))

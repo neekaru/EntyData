@@ -1,18 +1,9 @@
 
+
 import httpx
 from bs4 import BeautifulSoup
 import re
-
-def v2tuple(v):
-    # Only use numeric parts, ignore any suffixes like '-alpha3'
-    parts = re.split(r'\.|-', v)
-    nums = []
-    for part in parts:
-        if part.isdigit():
-            nums.append(int(part))
-        else:
-            break
-    return tuple(nums)
+from utils import v2tuple, version_key, SimpleVersion
 
 class ComposerScrape:
     def __init__(self):

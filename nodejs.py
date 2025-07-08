@@ -1,9 +1,6 @@
+
 import httpx
-class SimpleVersion:
-    def __init__(self, v):
-        self.parts = tuple(int(x) for x in v.split('.'))
-    def __ge__(self, other):
-        return self.parts >= other.parts
+from utils import v2tuple, version_key, SimpleVersion
 
 class NodeScrape:
     def __init__(self):
