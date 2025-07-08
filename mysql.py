@@ -1,7 +1,6 @@
 import httpx
 from bs4 import BeautifulSoup
 import re
-from urllib.parse import urlparse, parse_qs
 from tqdm import tqdm
 import logging
 
