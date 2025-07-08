@@ -1,0 +1,108 @@
+{
+  "phpmyadmin": [
+    {
+      "version": "5.1.0",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.0/phpMyAdmin-5.1.0-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.1.1",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.1.2",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.2/phpMyAdmin-5.1.2-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.1.3",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.3/phpMyAdmin-5.1.3-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.1.4",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.4/phpMyAdmin-5.1.4-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.4/phpMyAdmin-5.1.4-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.2.0",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.2.1",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-english.zip"
+        }
+      ]
+    },
+    {
+      "version": "5.2.2",
+      "downloads": [
+        {
+          "type": "all-languages",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-all-languages.zip"
+        },
+        {
+          "type": "english",
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/5.2.2/phpMyAdmin-5.2.2-english.zip"
+        }
+      ]
+    }
+  ]
+}
