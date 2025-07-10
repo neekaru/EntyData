@@ -3,6 +3,7 @@ import httpx
 from bs4 import BeautifulSoup
 import re
 from utils import v2tuple
+import json
 
 class ApacheScrape:
     def __init__(self):
@@ -155,10 +156,13 @@ class ApacheScrape:
 if __name__ == "__main__":
     print("Scraping Apache versions...")
     scraper = ApacheScrape()
+    with open("test_changelog.txt", "r", encoding="utf-8") as f:
+        changelog_html = f.read()
     version_list = scraper.scrape_version()
-    changelog_list = scraper.scrape_changelog()  # Use real online data
+    changelog_list = scraper.scrape_changelog(html=changelog_html)  # Use real online data
     results = scraper.scrape(version_list=version_list, changelog_list=changelog_list)
-    import json
-    print(json.dumps(results, indent=2))
+    with open("apache.json", "w", encoding="utf-8") as jf:
+        json.dump(results, jf, indent=2)
+    print("Wrote apache.json")
 
     
