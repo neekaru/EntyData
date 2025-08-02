@@ -1,250 +1,47 @@
 {
   "php": [
     {
-      "version": "8.4.10",
-      "display": "PHP 8.4 (8.4.10)",
-      "builds": [
+      "os": "Windows",
+      "data": [
         {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs17",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.4.10-nts-Win32-vs17-x64.zip"
+          "version": "8.4.11",
+          "gpg": "",
+          "link": "https://windows.php.net/downloads/releases/php-8.4.11-nts-Win32-vs17-x64.zip"
         },
         {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs17",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.4.10-nts-Win32-vs17-x64.zip"
+          "version": "8.4.11",
+          "gpg": "",
+          "link": "https://windows.php.net/downloads/releases/php-8.4.11-Win32-vs17-x64.zip"
         },
         {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs17",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.4.10-Win32-vs17-x64.zip"
+          "version": "8.3.24",
+          "gpg": "",
+          "link": "https://windows.php.net/downloads/releases/php-8.3.24-nts-Win32-vs16-x64.zip"
         },
         {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs17",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.4.10-Win32-vs17-x64.zip"
+          "version": "8.3.24",
+          "gpg": "",
+          "link": "https://windows.php.net/downloads/releases/php-8.3.24-Win32-vs16-x64.zip"
         },
         {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs17",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.4.10-nts-Win32-vs17-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs17",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.4.10-nts-Win32-vs17-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs17",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.4.10-Win32-vs17-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs17",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.4.10-Win32-vs17-x86.zip"
-        }
-      ]
-    },
-    {
-      "version": "8.3.23",
-      "display": "PHP 8.3 (8.3.23)",
-      "builds": [
-        {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.3.23-nts-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.3.23-nts-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.3.23-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.3.23-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.3.23-nts-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.3.23-nts-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.3.23-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.3.23-Win32-vs16-x86.zip"
-        }
-      ]
-    },
-    {
-      "version": "8.2.29",
-      "display": "PHP 8.2 (8.2.29)",
-      "builds": [
-        {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Release",
+          "version": "8.2.29",
+          "gpg": "",
           "link": "https://windows.php.net/downloads/releases/php-8.2.29-nts-Win32-vs16-x64.zip"
         },
         {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.2.29-nts-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Release",
+          "version": "8.2.29",
+          "gpg": "",
           "link": "https://windows.php.net/downloads/releases/php-8.2.29-Win32-vs16-x64.zip"
         },
         {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.2.29-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.2.29-nts-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.2.29-nts-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.2.29-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.2.29-Win32-vs16-x86.zip"
-        }
-      ]
-    },
-    {
-      "version": "8.1.33",
-      "display": "PHP 8.1 (8.1.33)",
-      "builds": [
-        {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Release",
+          "version": "8.1.33",
+          "gpg": "",
           "link": "https://windows.php.net/downloads/releases/php-8.1.33-nts-Win32-vs16-x64.zip"
         },
         {
-          "arch": "x64",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.1.33-nts-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Release",
+          "version": "8.1.33",
+          "gpg": "",
           "link": "https://windows.php.net/downloads/releases/php-8.1.33-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x64",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.1.33-Win32-vs16-x64.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.1.33-nts-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": true,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.1.33-nts-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Release",
-          "link": "https://windows.php.net/downloads/releases/php-8.1.33-Win32-vs16-x86.zip"
-        },
-        {
-          "arch": "x86",
-          "nts": false,
-          "vs": "vs16",
-          "type": "Debug Pack",
-          "link": "https://windows.php.net/downloads/releases/php-debug-pack-8.1.33-Win32-vs16-x86.zip"
         }
       ]
     }
