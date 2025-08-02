@@ -1,6 +1,6 @@
 
 import httpx
-from utils import v2tuple, version_key, SimpleVersion
+from utils import SimpleVersion
 
 class NodeScrape:
     def __init__(self):

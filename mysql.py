@@ -2,7 +2,10 @@ import httpx
 from bs4 import BeautifulSoup
 import re
 from tqdm import tqdm
+from utils import VersionHandling
 import logging
+
+import utils
 
 class MysqlScrape:
     def __init__(self):
@@ -182,11 +185,8 @@ if __name__ == "__main__":
                     "gpg": entry.get("gpg", ""),
                     "link": entry.get("link", "")
                 }
-        
-        def version_key(v):
-            return tuple(int(x) if x.isdigit() else 0 for x in v.split(".")) if v else (0,)
 
-        sorted_versions = sorted(version_map.keys(), key=version_key, reverse=True)
+        sorted_versions = sorted(version_map.keys(), key=VersionHandling.version_key, reverse=True)
         ordered_data = [version_map[v] for v in sorted_versions]
         mysql_list.append({"os": os_name, "data": ordered_data})
     

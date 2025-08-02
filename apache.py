@@ -2,7 +2,7 @@
 import httpx
 from bs4 import BeautifulSoup
 import re
-from utils import v2tuple
+from utils import VersionHandling
 import json
 
 class ApacheScrape:
@@ -56,6 +56,7 @@ class ApacheScrape:
         return True
 
     def version_in_range(self, version):
+        v2tuple = VersionHandling.v2tuple
         return v2tuple(self.min_version) <= v2tuple(version) <= v2tuple(self.max_version)
 
     def scrape_version(self, html=None):
@@ -112,6 +113,7 @@ class ApacheScrape:
         Generate download links for each version using scrape_version and scrape_changelog.
         Returns a list of dicts: {version, date, links: {vs17_win64, vs17_win32, vs16_win64, vs16_win32}}
         """
+        v2tuple = VersionHandling.v2tuple
         # If not provided, get from methods
         if version_list is None:
             version_list = self.scrape_version()

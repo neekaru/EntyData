@@ -3,7 +3,7 @@
 import httpx
 from bs4 import BeautifulSoup
 import re
-from utils import v2tuple, version_key, SimpleVersion
+from utils import VersionHandling, SimpleVersion
 
 class ComposerScrape:
     def __init__(self):
@@ -26,6 +26,7 @@ class ComposerScrape:
                     if re.search(r'-(RC|alpha)(\d*)$', version, re.IGNORECASE):
                         continue
                     # Only include versions in min-max range
+                    v2tuple = VersionHandling.v2tuple
                     if version.startswith('2.') and v2tuple(self.min_version) <= v2tuple(version) <= v2tuple(self.max_version):
                         # Find date (second <td>), sha256sum (in <code>), and download link
                         tds_all = tr.find_all('td')
@@ -56,6 +57,7 @@ class ComposerScrape:
         }
 
     def filter_versions(self, version):
+        v2tuple = VersionHandling.v2tupl
         # Only include versions that start with '2.' and are not RC or alpha, and in min-max range
         if re.search(r'-(RC|alpha)(\d*)$', version, re.IGNORECASE):
             return False

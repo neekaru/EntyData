@@ -2,7 +2,7 @@
 
 import httpx
 from bs4 import BeautifulSoup
-from utils import v2tuple, version_key, SimpleVersion
+from utils import VersionHandling
 
 class HeldiSqlScrape:
     def __init__(self):
@@ -46,6 +46,7 @@ class HeldiSqlScrape:
         return version_map
 
     def filter_version(self, text):
+        v2tuple = VersionHandling.v2tuple
         # Only include versions in the min-max range
         if text.startswith("v12."):
             version = text.split()[0]
@@ -96,6 +97,7 @@ class HeldiSqlScrape:
 import json
 result = HeldiSqlScrape().scrape()
 if result:
+    v2tuple = VersionHandling.v2tuple
     # Transform to requested format
     releases = []
     for v, downloads in sorted(result.items(), key=lambda x: v2tuple(x[0].lstrip('v')), reverse=True):
