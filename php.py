@@ -10,7 +10,8 @@ class PhpWinScrape:
 
     def scraper(self):
         bs = BeautifulSoup(httpx.get(self.php_url).text, "html.parser")
-        php = []
+        versions_data = []
+        
         for h3 in bs.find_all("h3", class_="summary entry-title"):
             display = h3.text.strip()
             # Extract version number from display, e.g. "PHP 8.4 (8.4.10)" -> "8.4.10"
@@ -19,10 +20,10 @@ class PhpWinScrape:
             block = h3.find_parent("div", class_="block")
             if not block:
                 continue
-            builds = []
-            # Find all innerbox blocks for builds
+            
+            # Find both thread-safe and non-thread-safe builds for this version
+            builds_found = []
             for innerbox in block.find_all("div", class_="innerbox"):
-                # Get build info from h4 title, e.g. "VS16 x64 Non Thread Safe (2025-Jul-01 17:47:58)"
                 h4 = innerbox.find("h4")
                 if not h4:
                     continue
@@ -30,34 +31,53 @@ class PhpWinScrape:
                 vs = "vs17" if "vs17" in build_title.lower() else ("vs16" if "vs16" in build_title.lower() else None)
                 arch = "x64" if "x64" in build_title.lower() else ("x86" if "x86" in build_title.lower() else None)
                 nts = True if "non thread safe" in build_title.lower() else False
-                # Now get links in this innerbox
+                
+                # Look for Release zip files
                 for a in innerbox.find_all("a"):
                     label = a.text.strip().lower()
                     if not self.filter_version(label):
                         continue
-                    link = a.get("href")
-                    if link and link.startswith("/"):
-                        link = "https://windows.php.net" + link
-                    if "debug pack" in label:
-                        typ = "Debug Pack"
-                    elif "zip" in label:
-                        typ = "Release"
-                    else:
-                        typ = label
-                    builds.append({
-                        "arch": arch,
-                        "nts": nts,
-                        "vs": vs,
-                        "type": typ,
-                        "link": link
-                    })
-            if builds:
-                php.append({
+                    if "zip" in label and "debug pack" not in label:
+                        link = a.get("href")
+                        if link and link.startswith("/"):
+                            link = "https://windows.php.net" + link
+                        # Collect x64 builds (both thread-safe and non-thread-safe)
+                        if arch == "x64":
+                            builds_found.append({
+                                "link": link,
+                                "nts": nts,
+                                "vs": vs
+                            })
+                            break
+            
+            # Add all found builds for this version
+            for build in builds_found:
+                versions_data.append({
                     "version": version,
-                    "display": display,
-                    "builds": builds
+                    "link": build["link"]
                 })
-        return {"php": php}
+        
+        # Sort versions in descending order
+        def version_key(item):
+            v = item["version"]
+            return tuple(int(x) if x.isdigit() else 0 for x in v.split(".")) if v else (0,)
+        
+        sorted_versions = sorted(versions_data, key=version_key, reverse=True)
+        
+        # Create data for Windows only
+        os_data = []
+        
+        # Windows data (from scraped data)
+        windows_data = []
+        for item in sorted_versions:
+            windows_data.append({
+                "version": item["version"],
+                "gpg": "",  # PHP Windows builds don't provide GPG signatures
+                "link": item["link"]
+            })
+        os_data.append({"os": "Windows", "data": windows_data})
+        
+        return {"php": os_data}
 
     @staticmethod
     def filter_version(label):
@@ -72,7 +92,15 @@ class PhpWinScrape:
             return False
         return True
 
-import json
-with open("php.json", "w", encoding="utf-8") as f:
-    json.dump(PhpWinScrape().scraper(), f, indent=2)
-print("Saved to php.json")
+if __name__ == "__main__":
+    import json
+    
+    scraper = PhpWinScrape()
+    result = scraper.scraper()
+    
+    # Save to JSON file like mysql.py does
+    with open("assets/php.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    
+    print("Saved all PHP download info to assets/php.json")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
