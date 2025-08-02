@@ -10,7 +10,7 @@ class ComposerScrape:
         self.url = "https://getcomposer.org/download/"
         self.base_url = "https://getcomposer.org"
         self.min_version = "2.2.0"
-        self.max_version = "2.8.9"
+        self.max_version = "2.8.10"
 
     def scrape(self):
         response = httpx.get(self.url)
@@ -47,14 +47,41 @@ class ComposerScrape:
                             "sha256sum": sha256sum,
                             "download_url": download_url
                         })
-        latest_version = releases[0]["version"] if releases else None
-        latest_release_date = releases[0]["date"] if releases else None
-        return {
-            "name": "composer",
-            "latest_version": latest_version,
-            "latest_release_date": latest_release_date,
-            "releases": releases
-        }
+        
+        # Create data for each OS (Composer is cross-platform)
+        os_data = []
+        
+        # Windows data
+        windows_data = []
+        for release in releases:
+            windows_data.append({
+                "version": release["version"],
+                "gpg": "",  # Composer doesn't provide GPG signatures, but has sha256
+                "link": release["download_url"]
+            })
+        os_data.append({"os": "Windows", "data": windows_data})
+        
+        # Linux data
+        linux_data = []
+        for release in releases:
+            linux_data.append({
+                "version": release["version"],
+                "gpg": "",  # Composer doesn't provide GPG signatures, but has sha256
+                "link": release["download_url"]
+            })
+        os_data.append({"os": "Linux", "data": linux_data})
+        
+        # macOS data
+        macos_data = []
+        for release in releases:
+            macos_data.append({
+                "version": release["version"],
+                "gpg": "",  # Composer doesn't provide GPG signatures, but has sha256
+                "link": release["download_url"]
+            })
+        os_data.append({"os": "macOS", "data": macos_data})
+        
+        return {"composer": os_data}
 
     def filter_versions(self, version):
         v2tuple = VersionHandling.v2tupl
@@ -66,8 +93,15 @@ class ComposerScrape:
         return False
 
     
-result = ComposerScrape().scrape()
-import json
-with open("assets/composer.json", "w", encoding="utf-8") as f:
-    f.write(json.dumps(result, indent=2, ensure_ascii=False))
-# print(json.dumps(result, indent=2, ensure_ascii=False))
+if __name__ == "__main__":
+    import json
+    
+    scraper = ComposerScrape()
+    result = scraper.scrape()
+    
+    # Save to JSON file like mysql.py does
+    with open("assets/composer.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    
+    print("Saved all Composer download info to assets/composer.json")
+    print(json.dumps(result, indent=2, ensure_ascii=False))

@@ -1,48 +1,69 @@
 {
-  "name": "heidisql",
-  "latest_version": "12.11",
-  "releases": [
+  "heidisql": [
     {
-      "version": "12.11",
-      "downloads": {
-        "64bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.11_64_Portable.zip",
-        "32bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.11_32_Portable.zip"
-      }
-    },
-    {
-      "version": "12.10",
-      "downloads": {
-        "64bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.10_64_Portable.zip",
-        "32bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.10_32_Portable.zip"
-      }
-    },
-    {
-      "version": "12.9",
-      "downloads": {
-        "64bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.9_64_Portable.zip",
-        "32bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.9_32_Portable.zip"
-      }
-    },
-    {
-      "version": "12.8",
-      "downloads": {
-        "32bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_32_Portable.zip",
-        "64bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_64_Portable.zip"
-      }
-    },
-    {
-      "version": "12.7",
-      "downloads": {
-        "32bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.7_32_Portable.zip",
-        "64bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.7_64_Portable.zip"
-      }
-    },
-    {
-      "version": "12.6",
-      "downloads": {
-        "32bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.6_32_Portable.zip",
-        "64bit": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.6_64_Portable.zip"
-      }
+      "os": "Windows",
+      "data": [
+        {
+          "version": "12.11",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.11_64_Portable.zip"
+        },
+        {
+          "version": "12.11",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.11_32_Portable.zip"
+        },
+        {
+          "version": "12.10",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.10_64_Portable.zip"
+        },
+        {
+          "version": "12.10",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.10_32_Portable.zip"
+        },
+        {
+          "version": "12.9",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.9_64_Portable.zip"
+        },
+        {
+          "version": "12.9",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.9_32_Portable.zip"
+        },
+        {
+          "version": "12.8",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_64_Portable.zip"
+        },
+        {
+          "version": "12.8",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_32_Portable.zip"
+        },
+        {
+          "version": "12.7",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.7_64_Portable.zip"
+        },
+        {
+          "version": "12.7",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.7_32_Portable.zip"
+        },
+        {
+          "version": "12.6",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.6_64_Portable.zip"
+        },
+        {
+          "version": "12.6",
+          "gpg": "",
+          "link": "https://www.heidisql.com/downloads/releases/HeidiSQL_12.6_32_Portable.zip"
+        }
+      ]
     }
   ]
 }

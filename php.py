@@ -2,6 +2,8 @@ import httpx
 import re
 from bs4 import BeautifulSoup
 
+from utils import VersionHandling
+
 
 class PhpWinScrape:
     def __init__(self):
@@ -60,7 +62,7 @@ class PhpWinScrape:
         # Sort versions in descending order
         def version_key(item):
             v = item["version"]
-            return tuple(int(x) if x.isdigit() else 0 for x in v.split(".")) if v else (0,)
+            return VersionHandling.version_key(v)
         
         sorted_versions = sorted(versions_data, key=version_key, reverse=True)
         

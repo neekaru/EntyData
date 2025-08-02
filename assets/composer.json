@@ -1,475 +1,1204 @@
 {
-  "name": "vendor/composer",
-  "latest_version": "2.8.9",
-  "latest_release_date": "2025-05-13",
-  "releases": [
-    {
-      "version": "2.8.9",
-      "date": "2025-05-13",
-      "sha256sum": "8e8829ec2b97fcb05158236984bc252bef902e7b8ff65555a1eeda4ec13fb82b",
-      "download_url": "https://getcomposer.org/download/2.8.9/composer.phar"
-    },
-    {
-      "version": "2.8.8",
-      "date": "2025-04-04",
-      "sha256sum": "957263e284b9f7a13d7f475dc65f3614d151b0c4dcc7e8761f7e7f749447fb68",
-      "download_url": "https://getcomposer.org/download/2.8.8/composer.phar"
-    },
-    {
-      "version": "2.8.7",
-      "date": "2025-04-03",
-      "sha256sum": "2528507840901565fe6cecd19c7e9f8983b8d91b5eb4bab1599b14254401e675",
-      "download_url": "https://getcomposer.org/download/2.8.7/composer.phar"
-    },
-    {
-      "version": "2.8.6",
-      "date": "2025-02-25",
-      "sha256sum": "becc28b909d2cca563e7caee1e488063312af36b1f2e31db64f417723b8c4026",
-      "download_url": "https://getcomposer.org/download/2.8.6/composer.phar"
-    },
-    {
-      "version": "2.8.5",
-      "date": "2025-01-21",
-      "sha256sum": "9cef18212e222351aeb476b81de7b2a5383f775336474467bf5c7ccfe84ab0cc",
-      "download_url": "https://getcomposer.org/download/2.8.5/composer.phar"
-    },
-    {
-      "version": "2.8.4",
-      "date": "2024-12-11",
-      "sha256sum": "c4c4e2e1beab0ea04e0bd042a5dbba9feda1fbf5eda0d36203958edd343c0a8a",
-      "download_url": "https://getcomposer.org/download/2.8.4/composer.phar"
-    },
-    {
-      "version": "2.8.3",
-      "date": "2024-11-17",
-      "sha256sum": "8323b4105c6e166d47c9db93209370083f9e421743636e108c37d8c1126386ef",
-      "download_url": "https://getcomposer.org/download/2.8.3/composer.phar"
-    },
-    {
-      "version": "2.8.2",
-      "date": "2024-10-29",
-      "sha256sum": "9ed076041e269820c6c4223d66c5325fcaddc7f4b4317b3ba936812a965857ed",
-      "download_url": "https://getcomposer.org/download/2.8.2/composer.phar"
-    },
-    {
-      "version": "2.8.1",
-      "date": "2024-10-04",
-      "sha256sum": "930b376fbd2147a623ea7b704eb9d3b8b0d6072992207aa0535aa21f6f05378e",
-      "download_url": "https://getcomposer.org/download/2.8.1/composer.phar"
-    },
-    {
-      "version": "2.8.0",
-      "date": "2024-10-02",
-      "sha256sum": "1b23f2a31cb05f0e8ae29b5723fc5edf37e565106d6fae2cf23f298efa9c8981",
-      "download_url": "https://getcomposer.org/download/2.8.0/composer.phar"
-    },
-    {
-      "version": "2.7.9",
-      "date": "2024-09-04",
-      "sha256sum": "b6de5e65c199d80ba11897fbe1364e063e858d483f6a81a176c4d60f2b1d6347",
-      "download_url": "https://getcomposer.org/download/2.7.9/composer.phar"
-    },
-    {
-      "version": "2.7.8",
-      "date": "2024-08-22",
-      "sha256sum": "3da35dc2abb99d8ef3fdb1dec3166c39189f7cb29974a225e7bbca04c1b2c6e0",
-      "download_url": "https://getcomposer.org/download/2.7.8/composer.phar"
-    },
-    {
-      "version": "2.7.7",
-      "date": "2024-06-10",
-      "sha256sum": "aab940cd53d285a54c50465820a2080fcb7182a4ba1e5f795abfb10414a4b4be",
-      "download_url": "https://getcomposer.org/download/2.7.7/composer.phar"
-    },
-    {
-      "version": "2.7.6",
-      "date": "2024-05-04",
-      "sha256sum": "29dc9a19ef33535db061b31180b2a833a7cf8d2cf4145b33a2f83504877bba08",
-      "download_url": "https://getcomposer.org/download/2.7.6/composer.phar"
-    },
-    {
-      "version": "2.7.5",
-      "date": "2024-05-03",
-      "sha256sum": "0dc1f6bcb7a26ee165206010213c6069a537bf8e6533528739a864f154549b77",
-      "download_url": "https://getcomposer.org/download/2.7.5/composer.phar"
-    },
-    {
-      "version": "2.7.4",
-      "date": "2024-04-22",
-      "sha256sum": "ee01080d632d2bbfa9c618009cca13718f36e751dda679a6009cee751c13b2d9",
-      "download_url": "https://getcomposer.org/download/2.7.4/composer.phar"
-    },
-    {
-      "version": "2.7.3",
-      "date": "2024-04-19",
-      "sha256sum": "fcc02ff044b5a04fbecff0158cb6041c25e8f78ac494098736fecd2bb4f381e4",
-      "download_url": "https://getcomposer.org/download/2.7.3/composer.phar"
-    },
-    {
-      "version": "2.7.2",
-      "date": "2024-03-11",
-      "sha256sum": "049b8e0ed9f264d770a0510858cffbc35401510759edc9a784b3a5c6e020bcac",
-      "download_url": "https://getcomposer.org/download/2.7.2/composer.phar"
-    },
-    {
-      "version": "2.7.1",
-      "date": "2024-02-09",
-      "sha256sum": "1ffd0be3f27e237b1ae47f9e8f29f96ac7f50a0bd9eef4f88cdbe94dd04bfff0",
-      "download_url": "https://getcomposer.org/download/2.7.1/composer.phar"
-    },
-    {
-      "version": "2.7.0",
-      "date": "2024-02-08",
-      "sha256sum": "2fc501cbef1891379523ee4989d37bf04798415a05f8eb44ae75acb2fdf2596f",
-      "download_url": "https://getcomposer.org/download/2.7.0/composer.phar"
-    },
-    {
-      "version": "2.6.6",
-      "date": "2023-12-08",
-      "sha256sum": "72600201c73c7c4b218f1c0511b36d8537963e36aafa244757f52309f885b314",
-      "download_url": "https://getcomposer.org/download/2.6.6/composer.phar"
-    },
-    {
-      "version": "2.6.5",
-      "date": "2023-10-06",
-      "sha256sum": "9a18e1a3aadbcb94c1bafd6c4a98ff931f4b43a456ef48575130466e19f05dd6",
-      "download_url": "https://getcomposer.org/download/2.6.5/composer.phar"
-    },
-    {
-      "version": "2.6.4",
-      "date": "2023-09-29",
-      "sha256sum": "5a39f3e2ce5ba391ee3fecb227faf21390f5b7ed5c56f14cab9e1c3048bcf8b8",
-      "download_url": "https://getcomposer.org/download/2.6.4/composer.phar"
-    },
-    {
-      "version": "2.6.3",
-      "date": "2023-09-15",
-      "sha256sum": "e58a390cac0df45ccf5a3d95ae94fa239eded8b7907fa2c8f752f020304fc9b1",
-      "download_url": "https://getcomposer.org/download/2.6.3/composer.phar"
-    },
-    {
-      "version": "2.6.2",
-      "date": "2023-09-03",
-      "sha256sum": "88c84d4a53fcf1c27d6762e1d5d6b70d57c6dc9d2e2314fd09dbf86bf61e1aef",
-      "download_url": "https://getcomposer.org/download/2.6.2/composer.phar"
-    },
-    {
-      "version": "2.6.1",
-      "date": "2023-09-01",
-      "sha256sum": "216bd5a516b544783fdce1a9e3a1eeb41f0aa9f0edb20dcd04f2846df64d3661",
-      "download_url": "https://getcomposer.org/download/2.6.1/composer.phar"
-    },
-    {
-      "version": "2.6.0",
-      "date": "2023-09-01",
-      "sha256sum": "3b190c1cb72670fc033a4831e68c02068c0300616bde4d6ef4d1a183b7d33cc4",
-      "download_url": "https://getcomposer.org/download/2.6.0/composer.phar"
-    },
-    {
-      "version": "2.5.8",
-      "date": "2023-06-09",
-      "sha256sum": "f07934fad44f9048c0dc875a506cca31cc2794d6aebfc1867f3b1fbf48dce2c5",
-      "download_url": "https://getcomposer.org/download/2.5.8/composer.phar"
-    },
-    {
-      "version": "2.5.7",
-      "date": "2023-05-24",
-      "sha256sum": "9256c4c1c803b9d0cb7a66a1ab6c737e48c43cc6df7b8ec9ec2497a724bf44de",
-      "download_url": "https://getcomposer.org/download/2.5.7/composer.phar"
-    },
-    {
-      "version": "2.5.6",
-      "date": "2023-05-24",
-      "sha256sum": "79021fbedfb2b383d606d0cf2161eb2b034099ca4794ffa572e8575f7c5dabc8",
-      "download_url": "https://getcomposer.org/download/2.5.6/composer.phar"
-    },
-    {
-      "version": "2.5.5",
-      "date": "2023-03-21",
-      "sha256sum": "566a6d1cf4be1cc3ac882d2a2a13817ffae54e60f5aa7c9137434810a5809ffc",
-      "download_url": "https://getcomposer.org/download/2.5.5/composer.phar"
-    },
-    {
-      "version": "2.5.4",
-      "date": "2023-02-15",
-      "sha256sum": "91ce6cbf9463eae86ae9d5c21d42faa601a519f3fbb2b623a55ee24678079bd3",
-      "download_url": "https://getcomposer.org/download/2.5.4/composer.phar"
-    },
-    {
-      "version": "2.5.3",
-      "date": "2023-02-10",
-      "sha256sum": "2e1061821951c6a5ece033a025d06296d4a1d056fee2f4bebd35815cf4b1b0f9",
-      "download_url": "https://getcomposer.org/download/2.5.3/composer.phar"
-    },
-    {
-      "version": "2.5.2",
-      "date": "2023-02-04",
-      "sha256sum": "0844c3dd85bbfa039d33fbda58ae65a38a9f615fcba76948aed75bf94d7606ca",
-      "download_url": "https://getcomposer.org/download/2.5.2/composer.phar"
-    },
-    {
-      "version": "2.5.1",
-      "date": "2022-12-22",
-      "sha256sum": "f1b94fee11a5bd6a1aae5d77c8da269df27c705fcc806ebf4c8c2e6fa8645c20",
-      "download_url": "https://getcomposer.org/download/2.5.1/composer.phar"
-    },
-    {
-      "version": "2.5.0",
-      "date": "2022-12-20",
-      "sha256sum": "b571610e5451785f76389a08e9575d91c3d6e38fee1df7a9708fe307013c8424",
-      "download_url": "https://getcomposer.org/download/2.5.0/composer.phar"
-    },
-    {
-      "version": "2.4.4",
-      "date": "2022-10-27",
-      "sha256sum": "c252c2a2219956f88089ffc242b42c8cb9300a368fd3890d63940e4fc9652345",
-      "download_url": "https://getcomposer.org/download/2.4.4/composer.phar"
-    },
-    {
-      "version": "2.4.3",
-      "date": "2022-10-14",
-      "sha256sum": "26d72f2790502bc9b22209e1cec1e0e43d33b368606ad227d327cccb388b609a",
-      "download_url": "https://getcomposer.org/download/2.4.3/composer.phar"
-    },
-    {
-      "version": "2.4.2",
-      "date": "2022-09-14",
-      "sha256sum": "8fe98a01050c92cc6812b8ead3bd5b6e0bcdc575ce7a93b242bde497a31d7732",
-      "download_url": "https://getcomposer.org/download/2.4.2/composer.phar"
-    },
-    {
-      "version": "2.4.1",
-      "date": "2022-08-20",
-      "sha256sum": "ea8cf6308ec76ff9645c3818841a7588096b9dc2767345fbd4bd492dd8a6dca6",
-      "download_url": "https://getcomposer.org/download/2.4.1/composer.phar"
-    },
-    {
-      "version": "2.4.0",
-      "date": "2022-08-16",
-      "sha256sum": "1cdc74f74965908d0e98d00feeca37c23b86da51170a3a11a1538d89ff44d4dd",
-      "download_url": "https://getcomposer.org/download/2.4.0/composer.phar"
-    },
-    {
-      "version": "2.3.10",
-      "date": "2022-07-13",
-      "sha256sum": "d808272f284fa8e0f8b470703e1438ac8f362030bbc9d12e29530277d767aff0",
-      "download_url": "https://getcomposer.org/download/2.3.10/composer.phar"
-    },
-    {
-      "version": "2.3.9",
-      "date": "2022-07-05",
-      "sha256sum": "0ec0cd63115cad28307e4b796350712e3cb77db992399aeb4a18a9c0680d7de2",
-      "download_url": "https://getcomposer.org/download/2.3.9/composer.phar"
-    },
-    {
-      "version": "2.3.8",
-      "date": "2022-07-01",
-      "sha256sum": "c6ab768ad3239c4d4cc4f39f8ff7462925e088cd441e5bdb749fbf6efe049769",
-      "download_url": "https://getcomposer.org/download/2.3.8/composer.phar"
-    },
-    {
-      "version": "2.3.7",
-      "date": "2022-06-06",
-      "sha256sum": "3f2d46787d51070f922bf991aa08324566f726f186076c2a5e4e8b01a8ea3fd0",
-      "download_url": "https://getcomposer.org/download/2.3.7/composer.phar"
-    },
-    {
-      "version": "2.3.6",
-      "date": "2022-06-01",
-      "sha256sum": "188e079d509156130d30204c9c8b3f00134dbbc6afadc2f37ed05d02646a47dc",
-      "download_url": "https://getcomposer.org/download/2.3.6/composer.phar"
-    },
-    {
-      "version": "2.3.5",
-      "date": "2022-04-13",
-      "sha256sum": "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4",
-      "download_url": "https://getcomposer.org/download/2.3.5/composer.phar"
-    },
-    {
-      "version": "2.3.4",
-      "date": "2022-04-07",
-      "sha256sum": "1fc8fc5b43f081fe76fa85eb5a213412e55f54a60bae4880bc96521ae482d6c3",
-      "download_url": "https://getcomposer.org/download/2.3.4/composer.phar"
-    },
-    {
-      "version": "2.3.3",
-      "date": "2022-04-01",
-      "sha256sum": "d6931ec2b38b41bd0ad62f9d157908e6688bac091bbf0bd6a619c1067b922402",
-      "download_url": "https://getcomposer.org/download/2.3.3/composer.phar"
-    },
-    {
-      "version": "2.3.2",
-      "date": "2022-03-30",
-      "sha256sum": "8ec134fe04ee52cd6465384c535ec61107368d4866ade9e995dcb96d8676f0c3",
-      "download_url": "https://getcomposer.org/download/2.3.2/composer.phar"
-    },
-    {
-      "version": "2.3.1",
-      "date": "2022-03-30",
-      "sha256sum": "35088e641c5e0f463652b20425e2a623095f539fb3a038ba8dccf1ce07f0eca9",
-      "download_url": "https://getcomposer.org/download/2.3.1/composer.phar"
-    },
-    {
-      "version": "2.3.0",
-      "date": "2022-03-30",
-      "sha256sum": "07d7d2adeaccd97eefa96c26bc6742b465b808b77bbf4246cf2b556970c2bcb1",
-      "download_url": "https://getcomposer.org/download/2.3.0/composer.phar"
-    },
-    {
-      "version": "2.2.25",
-      "date": "2024-12-11",
-      "sha256sum": "8b3f41253363f0645402d1951d6e7f02adedeef29c16de6074763e463e25c23f",
-      "download_url": "https://getcomposer.org/download/2.2.25/composer.phar"
-    },
-    {
-      "version": "2.2.24",
-      "date": "2024-06-10",
-      "sha256sum": "b0c383b1f430a80a74c006f20199d1e0226848a0a90afa5c0a7d01fb90ee9075",
-      "download_url": "https://getcomposer.org/download/2.2.24/composer.phar"
-    },
-    {
-      "version": "2.2.23",
-      "date": "2024-02-08",
-      "sha256sum": "060ff6b6b8bfb60a943c94954cc4e8bf3e780ff33ecd7c7d9eb2f43241f39740",
-      "download_url": "https://getcomposer.org/download/2.2.23/composer.phar"
-    },
-    {
-      "version": "2.2.22",
-      "date": "2023-09-29",
-      "sha256sum": "7d3500cc8c9a74b47e14103de150ac95c25ca227b39ffc89cb3a8b495b5db1d2",
-      "download_url": "https://getcomposer.org/download/2.2.22/composer.phar"
-    },
-    {
-      "version": "2.2.21",
-      "date": "2023-02-15",
-      "sha256sum": "5211584ad39af26704da9f6209bc5d8104a2d576e80ce9c7ed8368ddd779d0af",
-      "download_url": "https://getcomposer.org/download/2.2.21/composer.phar"
-    },
-    {
-      "version": "2.2.20",
-      "date": "2023-02-10",
-      "sha256sum": "d16bb62fd408109583e8f0c237909d4b1b32fb14ab9cfc15847d11086ba51dec",
-      "download_url": "https://getcomposer.org/download/2.2.20/composer.phar"
-    },
-    {
-      "version": "2.2.19",
-      "date": "2023-02-04",
-      "sha256sum": "325a7cb79ba2d34b27789b314504a8a028d1dde5a495445942bf66f5c19b30b1",
-      "download_url": "https://getcomposer.org/download/2.2.19/composer.phar"
-    },
-    {
-      "version": "2.2.18",
-      "date": "2022-08-20",
-      "sha256sum": "28a8d9740d615137a8c01d32aef9184db16f543fca36db038501a294d8e95b24",
-      "download_url": "https://getcomposer.org/download/2.2.18/composer.phar"
-    },
-    {
-      "version": "2.2.17",
-      "date": "2022-07-13",
-      "sha256sum": "ec034d3d92c94ab63ebdf1a2bfa9f5e34cb08b043dae91958c6fcb2f47170cea",
-      "download_url": "https://getcomposer.org/download/2.2.17/composer.phar"
-    },
-    {
-      "version": "2.2.16",
-      "date": "2022-07-05",
-      "sha256sum": "06932837764594c4864f913615d5ece24e8f0c40b8f074a5e00eacb23d3ae2c9",
-      "download_url": "https://getcomposer.org/download/2.2.16/composer.phar"
-    },
-    {
-      "version": "2.2.15",
-      "date": "2022-07-01",
-      "sha256sum": "c83adb636c9e5eb22c6c7ccd8c3e54a3ee515f849caef0ec46d378637c4fab32",
-      "download_url": "https://getcomposer.org/download/2.2.15/composer.phar"
-    },
-    {
-      "version": "2.2.14",
-      "date": "2022-06-06",
-      "sha256sum": "84433f01bcd778f59ec150a1cdd4991c3d9b6cf74bcb7b6c18cdcd1e5efed9d4",
-      "download_url": "https://getcomposer.org/download/2.2.14/composer.phar"
-    },
-    {
-      "version": "2.2.13",
-      "date": "2022-05-25",
-      "sha256sum": "4c3a6cbe00ad0aaae965523033d511fdf558ff7ff673749d925b7860c1807637",
-      "download_url": "https://getcomposer.org/download/2.2.13/composer.phar"
-    },
-    {
-      "version": "2.2.12",
-      "date": "2022-04-13",
-      "sha256sum": "1ce90687eb3f89a99c059d45dd419d08430ed249468544b932b1dad7fb22dda0",
-      "download_url": "https://getcomposer.org/download/2.2.12/composer.phar"
-    },
-    {
-      "version": "2.2.11",
-      "date": "2022-04-01",
-      "sha256sum": "87c4aa2955437245fe510e6b2c794b17aba9ff6761a832fda4785863a23c5ba4",
-      "download_url": "https://getcomposer.org/download/2.2.11/composer.phar"
-    },
-    {
-      "version": "2.2.10",
-      "date": "2022-03-29",
-      "sha256sum": "dc9dfdd2ffb1180d785b5a3d581c946ec6da135f55c9959f21b96fea7d7fb12d",
-      "download_url": "https://getcomposer.org/download/2.2.10/composer.phar"
-    },
-    {
-      "version": "2.2.9",
-      "date": "2022-03-15",
-      "sha256sum": "48f9fdc9ad93904fee96550b45ae03a51f69718502ee855da894b4ad71d2dfe0",
-      "download_url": "https://getcomposer.org/download/2.2.9/composer.phar"
-    },
-    {
-      "version": "2.2.8",
-      "date": "2022-03-15",
-      "sha256sum": "e1e1c580a237c739ecc1be57cf512e6b741faaa566439257d19ecd739ddfefaf",
-      "download_url": "https://getcomposer.org/download/2.2.8/composer.phar"
-    },
-    {
-      "version": "2.2.7",
-      "date": "2022-02-25",
-      "sha256sum": "10040ded663541990eef8ce1f6fa44cb3b4a47e145efb8e9e59907a15068033d",
-      "download_url": "https://getcomposer.org/download/2.2.7/composer.phar"
-    },
-    {
-      "version": "2.2.6",
-      "date": "2022-02-04",
-      "sha256sum": "1d58486b891e59e9e064c0d54bb38538f74d6014f75481542c69ad84d4e97704",
-      "download_url": "https://getcomposer.org/download/2.2.6/composer.phar"
-    },
-    {
-      "version": "2.2.5",
-      "date": "2022-01-21",
-      "sha256sum": "81ef304a70c957d6f05a7659f03b00eb50df6155195f51118459b2e49c96c3f3",
-      "download_url": "https://getcomposer.org/download/2.2.5/composer.phar"
-    },
-    {
-      "version": "2.2.4",
-      "date": "2022-01-08",
-      "sha256sum": "ba04e246960d193237d5ed6542bd78456898e7787fafb586f500c6807af7458d",
-      "download_url": "https://getcomposer.org/download/2.2.4/composer.phar"
-    },
-    {
-      "version": "2.2.3",
-      "date": "2021-12-31",
-      "sha256sum": "721cc27f81c6485fff70e6f56b9f2aadae770a1f8974a384c34e35987a230d8c",
-      "download_url": "https://getcomposer.org/download/2.2.3/composer.phar"
-    },
-    {
-      "version": "2.2.2",
-      "date": "2021-12-29",
-      "sha256sum": "7391e020cd3ed1a158fd6cfc0b79d7c005854396536b5499e58fc6eedb544b4e",
-      "download_url": "https://getcomposer.org/download/2.2.2/composer.phar"
-    },
-    {
-      "version": "2.2.1",
-      "date": "2021-12-22",
-      "sha256sum": "1d2067cd8a4df546498b04817b0fa3827f291d564bcde29254e8d6d2db15f896",
-      "download_url": "https://getcomposer.org/download/2.2.1/composer.phar"
-    },
-    {
-      "version": "2.2.0",
-      "date": "2021-12-22",
-      "sha256sum": "f7928b5465ad14c49901174d72c701d74ee278479ae19a44f6a46839e2d87d4d",
-      "download_url": "https://getcomposer.org/download/2.2.0/composer.phar"
+  "composer": [
+    {
+      "os": "Windows",
+      "data": [
+        {
+          "version": "2.8.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.10/composer.phar"
+        },
+        {
+          "version": "2.8.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.9/composer.phar"
+        },
+        {
+          "version": "2.8.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.8/composer.phar"
+        },
+        {
+          "version": "2.8.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.7/composer.phar"
+        },
+        {
+          "version": "2.8.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.6/composer.phar"
+        },
+        {
+          "version": "2.8.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.5/composer.phar"
+        },
+        {
+          "version": "2.8.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.4/composer.phar"
+        },
+        {
+          "version": "2.8.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.3/composer.phar"
+        },
+        {
+          "version": "2.8.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.2/composer.phar"
+        },
+        {
+          "version": "2.8.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.1/composer.phar"
+        },
+        {
+          "version": "2.8.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.0/composer.phar"
+        },
+        {
+          "version": "2.7.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.9/composer.phar"
+        },
+        {
+          "version": "2.7.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.8/composer.phar"
+        },
+        {
+          "version": "2.7.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.7/composer.phar"
+        },
+        {
+          "version": "2.7.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.6/composer.phar"
+        },
+        {
+          "version": "2.7.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.5/composer.phar"
+        },
+        {
+          "version": "2.7.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.4/composer.phar"
+        },
+        {
+          "version": "2.7.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.3/composer.phar"
+        },
+        {
+          "version": "2.7.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.2/composer.phar"
+        },
+        {
+          "version": "2.7.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.1/composer.phar"
+        },
+        {
+          "version": "2.7.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.0/composer.phar"
+        },
+        {
+          "version": "2.6.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.6/composer.phar"
+        },
+        {
+          "version": "2.6.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.5/composer.phar"
+        },
+        {
+          "version": "2.6.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.4/composer.phar"
+        },
+        {
+          "version": "2.6.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.3/composer.phar"
+        },
+        {
+          "version": "2.6.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.2/composer.phar"
+        },
+        {
+          "version": "2.6.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.1/composer.phar"
+        },
+        {
+          "version": "2.6.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.0/composer.phar"
+        },
+        {
+          "version": "2.5.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.8/composer.phar"
+        },
+        {
+          "version": "2.5.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.7/composer.phar"
+        },
+        {
+          "version": "2.5.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.6/composer.phar"
+        },
+        {
+          "version": "2.5.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.5/composer.phar"
+        },
+        {
+          "version": "2.5.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.4/composer.phar"
+        },
+        {
+          "version": "2.5.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.3/composer.phar"
+        },
+        {
+          "version": "2.5.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.2/composer.phar"
+        },
+        {
+          "version": "2.5.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.1/composer.phar"
+        },
+        {
+          "version": "2.5.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.0/composer.phar"
+        },
+        {
+          "version": "2.4.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.4/composer.phar"
+        },
+        {
+          "version": "2.4.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.3/composer.phar"
+        },
+        {
+          "version": "2.4.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.2/composer.phar"
+        },
+        {
+          "version": "2.4.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.1/composer.phar"
+        },
+        {
+          "version": "2.4.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.0/composer.phar"
+        },
+        {
+          "version": "2.3.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.10/composer.phar"
+        },
+        {
+          "version": "2.3.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.9/composer.phar"
+        },
+        {
+          "version": "2.3.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.8/composer.phar"
+        },
+        {
+          "version": "2.3.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.7/composer.phar"
+        },
+        {
+          "version": "2.3.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.6/composer.phar"
+        },
+        {
+          "version": "2.3.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.5/composer.phar"
+        },
+        {
+          "version": "2.3.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.4/composer.phar"
+        },
+        {
+          "version": "2.3.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.3/composer.phar"
+        },
+        {
+          "version": "2.3.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.2/composer.phar"
+        },
+        {
+          "version": "2.3.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.1/composer.phar"
+        },
+        {
+          "version": "2.3.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.0/composer.phar"
+        },
+        {
+          "version": "2.2.25",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.25/composer.phar"
+        },
+        {
+          "version": "2.2.24",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.24/composer.phar"
+        },
+        {
+          "version": "2.2.23",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.23/composer.phar"
+        },
+        {
+          "version": "2.2.22",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.22/composer.phar"
+        },
+        {
+          "version": "2.2.21",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.21/composer.phar"
+        },
+        {
+          "version": "2.2.20",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.20/composer.phar"
+        },
+        {
+          "version": "2.2.19",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.19/composer.phar"
+        },
+        {
+          "version": "2.2.18",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.18/composer.phar"
+        },
+        {
+          "version": "2.2.17",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.17/composer.phar"
+        },
+        {
+          "version": "2.2.16",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.16/composer.phar"
+        },
+        {
+          "version": "2.2.15",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.15/composer.phar"
+        },
+        {
+          "version": "2.2.14",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.14/composer.phar"
+        },
+        {
+          "version": "2.2.13",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.13/composer.phar"
+        },
+        {
+          "version": "2.2.12",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.12/composer.phar"
+        },
+        {
+          "version": "2.2.11",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.11/composer.phar"
+        },
+        {
+          "version": "2.2.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.10/composer.phar"
+        },
+        {
+          "version": "2.2.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.9/composer.phar"
+        },
+        {
+          "version": "2.2.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.8/composer.phar"
+        },
+        {
+          "version": "2.2.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.7/composer.phar"
+        },
+        {
+          "version": "2.2.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.6/composer.phar"
+        },
+        {
+          "version": "2.2.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.5/composer.phar"
+        },
+        {
+          "version": "2.2.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.4/composer.phar"
+        },
+        {
+          "version": "2.2.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.3/composer.phar"
+        },
+        {
+          "version": "2.2.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.2/composer.phar"
+        },
+        {
+          "version": "2.2.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.1/composer.phar"
+        },
+        {
+          "version": "2.2.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.0/composer.phar"
+        }
+      ]
+    },
+    {
+      "os": "Linux",
+      "data": [
+        {
+          "version": "2.8.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.10/composer.phar"
+        },
+        {
+          "version": "2.8.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.9/composer.phar"
+        },
+        {
+          "version": "2.8.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.8/composer.phar"
+        },
+        {
+          "version": "2.8.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.7/composer.phar"
+        },
+        {
+          "version": "2.8.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.6/composer.phar"
+        },
+        {
+          "version": "2.8.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.5/composer.phar"
+        },
+        {
+          "version": "2.8.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.4/composer.phar"
+        },
+        {
+          "version": "2.8.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.3/composer.phar"
+        },
+        {
+          "version": "2.8.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.2/composer.phar"
+        },
+        {
+          "version": "2.8.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.1/composer.phar"
+        },
+        {
+          "version": "2.8.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.0/composer.phar"
+        },
+        {
+          "version": "2.7.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.9/composer.phar"
+        },
+        {
+          "version": "2.7.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.8/composer.phar"
+        },
+        {
+          "version": "2.7.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.7/composer.phar"
+        },
+        {
+          "version": "2.7.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.6/composer.phar"
+        },
+        {
+          "version": "2.7.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.5/composer.phar"
+        },
+        {
+          "version": "2.7.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.4/composer.phar"
+        },
+        {
+          "version": "2.7.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.3/composer.phar"
+        },
+        {
+          "version": "2.7.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.2/composer.phar"
+        },
+        {
+          "version": "2.7.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.1/composer.phar"
+        },
+        {
+          "version": "2.7.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.0/composer.phar"
+        },
+        {
+          "version": "2.6.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.6/composer.phar"
+        },
+        {
+          "version": "2.6.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.5/composer.phar"
+        },
+        {
+          "version": "2.6.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.4/composer.phar"
+        },
+        {
+          "version": "2.6.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.3/composer.phar"
+        },
+        {
+          "version": "2.6.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.2/composer.phar"
+        },
+        {
+          "version": "2.6.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.1/composer.phar"
+        },
+        {
+          "version": "2.6.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.0/composer.phar"
+        },
+        {
+          "version": "2.5.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.8/composer.phar"
+        },
+        {
+          "version": "2.5.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.7/composer.phar"
+        },
+        {
+          "version": "2.5.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.6/composer.phar"
+        },
+        {
+          "version": "2.5.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.5/composer.phar"
+        },
+        {
+          "version": "2.5.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.4/composer.phar"
+        },
+        {
+          "version": "2.5.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.3/composer.phar"
+        },
+        {
+          "version": "2.5.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.2/composer.phar"
+        },
+        {
+          "version": "2.5.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.1/composer.phar"
+        },
+        {
+          "version": "2.5.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.0/composer.phar"
+        },
+        {
+          "version": "2.4.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.4/composer.phar"
+        },
+        {
+          "version": "2.4.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.3/composer.phar"
+        },
+        {
+          "version": "2.4.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.2/composer.phar"
+        },
+        {
+          "version": "2.4.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.1/composer.phar"
+        },
+        {
+          "version": "2.4.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.0/composer.phar"
+        },
+        {
+          "version": "2.3.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.10/composer.phar"
+        },
+        {
+          "version": "2.3.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.9/composer.phar"
+        },
+        {
+          "version": "2.3.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.8/composer.phar"
+        },
+        {
+          "version": "2.3.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.7/composer.phar"
+        },
+        {
+          "version": "2.3.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.6/composer.phar"
+        },
+        {
+          "version": "2.3.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.5/composer.phar"
+        },
+        {
+          "version": "2.3.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.4/composer.phar"
+        },
+        {
+          "version": "2.3.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.3/composer.phar"
+        },
+        {
+          "version": "2.3.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.2/composer.phar"
+        },
+        {
+          "version": "2.3.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.1/composer.phar"
+        },
+        {
+          "version": "2.3.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.0/composer.phar"
+        },
+        {
+          "version": "2.2.25",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.25/composer.phar"
+        },
+        {
+          "version": "2.2.24",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.24/composer.phar"
+        },
+        {
+          "version": "2.2.23",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.23/composer.phar"
+        },
+        {
+          "version": "2.2.22",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.22/composer.phar"
+        },
+        {
+          "version": "2.2.21",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.21/composer.phar"
+        },
+        {
+          "version": "2.2.20",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.20/composer.phar"
+        },
+        {
+          "version": "2.2.19",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.19/composer.phar"
+        },
+        {
+          "version": "2.2.18",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.18/composer.phar"
+        },
+        {
+          "version": "2.2.17",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.17/composer.phar"
+        },
+        {
+          "version": "2.2.16",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.16/composer.phar"
+        },
+        {
+          "version": "2.2.15",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.15/composer.phar"
+        },
+        {
+          "version": "2.2.14",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.14/composer.phar"
+        },
+        {
+          "version": "2.2.13",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.13/composer.phar"
+        },
+        {
+          "version": "2.2.12",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.12/composer.phar"
+        },
+        {
+          "version": "2.2.11",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.11/composer.phar"
+        },
+        {
+          "version": "2.2.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.10/composer.phar"
+        },
+        {
+          "version": "2.2.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.9/composer.phar"
+        },
+        {
+          "version": "2.2.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.8/composer.phar"
+        },
+        {
+          "version": "2.2.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.7/composer.phar"
+        },
+        {
+          "version": "2.2.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.6/composer.phar"
+        },
+        {
+          "version": "2.2.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.5/composer.phar"
+        },
+        {
+          "version": "2.2.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.4/composer.phar"
+        },
+        {
+          "version": "2.2.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.3/composer.phar"
+        },
+        {
+          "version": "2.2.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.2/composer.phar"
+        },
+        {
+          "version": "2.2.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.1/composer.phar"
+        },
+        {
+          "version": "2.2.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.0/composer.phar"
+        }
+      ]
+    },
+    {
+      "os": "macOS",
+      "data": [
+        {
+          "version": "2.8.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.10/composer.phar"
+        },
+        {
+          "version": "2.8.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.9/composer.phar"
+        },
+        {
+          "version": "2.8.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.8/composer.phar"
+        },
+        {
+          "version": "2.8.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.7/composer.phar"
+        },
+        {
+          "version": "2.8.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.6/composer.phar"
+        },
+        {
+          "version": "2.8.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.5/composer.phar"
+        },
+        {
+          "version": "2.8.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.4/composer.phar"
+        },
+        {
+          "version": "2.8.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.3/composer.phar"
+        },
+        {
+          "version": "2.8.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.2/composer.phar"
+        },
+        {
+          "version": "2.8.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.1/composer.phar"
+        },
+        {
+          "version": "2.8.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.8.0/composer.phar"
+        },
+        {
+          "version": "2.7.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.9/composer.phar"
+        },
+        {
+          "version": "2.7.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.8/composer.phar"
+        },
+        {
+          "version": "2.7.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.7/composer.phar"
+        },
+        {
+          "version": "2.7.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.6/composer.phar"
+        },
+        {
+          "version": "2.7.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.5/composer.phar"
+        },
+        {
+          "version": "2.7.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.4/composer.phar"
+        },
+        {
+          "version": "2.7.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.3/composer.phar"
+        },
+        {
+          "version": "2.7.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.2/composer.phar"
+        },
+        {
+          "version": "2.7.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.1/composer.phar"
+        },
+        {
+          "version": "2.7.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.7.0/composer.phar"
+        },
+        {
+          "version": "2.6.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.6/composer.phar"
+        },
+        {
+          "version": "2.6.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.5/composer.phar"
+        },
+        {
+          "version": "2.6.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.4/composer.phar"
+        },
+        {
+          "version": "2.6.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.3/composer.phar"
+        },
+        {
+          "version": "2.6.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.2/composer.phar"
+        },
+        {
+          "version": "2.6.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.1/composer.phar"
+        },
+        {
+          "version": "2.6.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.6.0/composer.phar"
+        },
+        {
+          "version": "2.5.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.8/composer.phar"
+        },
+        {
+          "version": "2.5.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.7/composer.phar"
+        },
+        {
+          "version": "2.5.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.6/composer.phar"
+        },
+        {
+          "version": "2.5.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.5/composer.phar"
+        },
+        {
+          "version": "2.5.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.4/composer.phar"
+        },
+        {
+          "version": "2.5.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.3/composer.phar"
+        },
+        {
+          "version": "2.5.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.2/composer.phar"
+        },
+        {
+          "version": "2.5.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.1/composer.phar"
+        },
+        {
+          "version": "2.5.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.5.0/composer.phar"
+        },
+        {
+          "version": "2.4.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.4/composer.phar"
+        },
+        {
+          "version": "2.4.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.3/composer.phar"
+        },
+        {
+          "version": "2.4.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.2/composer.phar"
+        },
+        {
+          "version": "2.4.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.1/composer.phar"
+        },
+        {
+          "version": "2.4.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.4.0/composer.phar"
+        },
+        {
+          "version": "2.3.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.10/composer.phar"
+        },
+        {
+          "version": "2.3.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.9/composer.phar"
+        },
+        {
+          "version": "2.3.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.8/composer.phar"
+        },
+        {
+          "version": "2.3.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.7/composer.phar"
+        },
+        {
+          "version": "2.3.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.6/composer.phar"
+        },
+        {
+          "version": "2.3.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.5/composer.phar"
+        },
+        {
+          "version": "2.3.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.4/composer.phar"
+        },
+        {
+          "version": "2.3.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.3/composer.phar"
+        },
+        {
+          "version": "2.3.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.2/composer.phar"
+        },
+        {
+          "version": "2.3.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.1/composer.phar"
+        },
+        {
+          "version": "2.3.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.3.0/composer.phar"
+        },
+        {
+          "version": "2.2.25",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.25/composer.phar"
+        },
+        {
+          "version": "2.2.24",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.24/composer.phar"
+        },
+        {
+          "version": "2.2.23",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.23/composer.phar"
+        },
+        {
+          "version": "2.2.22",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.22/composer.phar"
+        },
+        {
+          "version": "2.2.21",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.21/composer.phar"
+        },
+        {
+          "version": "2.2.20",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.20/composer.phar"
+        },
+        {
+          "version": "2.2.19",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.19/composer.phar"
+        },
+        {
+          "version": "2.2.18",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.18/composer.phar"
+        },
+        {
+          "version": "2.2.17",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.17/composer.phar"
+        },
+        {
+          "version": "2.2.16",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.16/composer.phar"
+        },
+        {
+          "version": "2.2.15",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.15/composer.phar"
+        },
+        {
+          "version": "2.2.14",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.14/composer.phar"
+        },
+        {
+          "version": "2.2.13",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.13/composer.phar"
+        },
+        {
+          "version": "2.2.12",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.12/composer.phar"
+        },
+        {
+          "version": "2.2.11",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.11/composer.phar"
+        },
+        {
+          "version": "2.2.10",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.10/composer.phar"
+        },
+        {
+          "version": "2.2.9",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.9/composer.phar"
+        },
+        {
+          "version": "2.2.8",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.8/composer.phar"
+        },
+        {
+          "version": "2.2.7",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.7/composer.phar"
+        },
+        {
+          "version": "2.2.6",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.6/composer.phar"
+        },
+        {
+          "version": "2.2.5",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.5/composer.phar"
+        },
+        {
+          "version": "2.2.4",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.4/composer.phar"
+        },
+        {
+          "version": "2.2.3",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.3/composer.phar"
+        },
+        {
+          "version": "2.2.2",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.2/composer.phar"
+        },
+        {
+          "version": "2.2.1",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.1/composer.phar"
+        },
+        {
+          "version": "2.2.0",
+          "gpg": "",
+          "link": "https://getcomposer.org/download/2.2.0/composer.phar"
+        }
+      ]
     }
   ]
 }

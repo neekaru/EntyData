@@ -46,18 +46,60 @@ class NodeScrape:
             print(f"An error occurred while fetching the data: {e}")
             return {}
 
-        nodejs = []
+        # Collect all versions that meet the minimum version requirement
+        versions = []
         for item in data:
             ver = item['version'].replace('v', '')
             if SimpleVersion(ver) >= self.min_version:
-                nodejs.append({
-                    "version": ver,
-                    "files": self.crafted_file_entries(ver)
-                })
-        return {"nodejs": nodejs}
+                versions.append(ver)
+        
+        # Create data for each OS
+        os_data = []
+        
+        # Windows data
+        windows_data = []
+        for ver in versions:
+            base_url = f"https://nodejs.org/dist/v{ver}"
+            windows_data.append({
+                "version": ver,
+                "gpg": f"{base_url}/SHASUMS256.txt.asc",
+                "link": f"{base_url}/node-v{ver}-win-x64.zip"
+            })
+        os_data.append({"os": "Windows", "data": windows_data})
+        
+        # Linux data
+        linux_data = []
+        for ver in versions:
+            base_url = f"https://nodejs.org/dist/v{ver}"
+            linux_data.append({
+                "version": ver,
+                "gpg": f"{base_url}/SHASUMS256.txt.asc",
+                "link": f"{base_url}/node-v{ver}-linux-x64.tar.xz"
+            })
+        os_data.append({"os": "Linux", "data": linux_data})
+        
+        # macOS data
+        macos_data = []
+        for ver in versions:
+            base_url = f"https://nodejs.org/dist/v{ver}"
+            macos_data.append({
+                "version": ver,
+                "gpg": f"{base_url}/SHASUMS256.txt.asc",
+                "link": f"{base_url}/node-v{ver}-darwin-arm64.tar.xz"
+            })
+        os_data.append({"os": "macOS", "data": macos_data})
+        
+        return {"nodejs": os_data}
 
-import json
-with open("nodejs.json", "w", encoding="utf-8") as f:
-    json.dump(NodeScrape().scrape_version(), f, indent=2)
-
-print("Saved to nodejs.json")
+if __name__ == "__main__":
+    import json
+    
+    scraper = NodeScrape()
+    result = scraper.scrape_version()
+    
+    # Save to JSON file like mysql.py does
+    with open("assets/nodejs.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    
+    print("Saved all Node.js download info to assets/nodejs.json")
+    print(json.dumps(result, indent=2, ensure_ascii=False))

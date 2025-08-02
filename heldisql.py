@@ -19,6 +19,7 @@ class HeldiSqlScrape:
         version_map = {}
         import re
         def version_in_range(version):
+            v2tuple = VersionHandling.v2tuple
             return v2tuple(self.min_version.lstrip('v')) <= v2tuple(version.lstrip('v')) <= v2tuple(self.max_version.lstrip('v'))
 
         for li in releases:
@@ -93,27 +94,48 @@ class HeldiSqlScrape:
 # print(HeldiSqlScrape().scrape())
 
 
-# Scrape and print only v12.11 to v12.6 Portable links from previous releases as JSON
-import json
-result = HeldiSqlScrape().scrape()
-if result:
-    v2tuple = VersionHandling.v2tuple
-    # Transform to requested format
-    releases = []
-    for v, downloads in sorted(result.items(), key=lambda x: v2tuple(x[0].lstrip('v')), reverse=True):
-        releases.append({
-            "version": v.lstrip('v'),
-            "downloads": downloads
-        })
-    latest_version = releases[0]["version"] if releases else None
-    output = {
-        "name": "heidisql",
-        "latest_version": latest_version,
-        "releases": releases
-    }
-    print(json.dumps(output, indent=2, ensure_ascii=False))
-    # Write JSON to assets/heldisql.json
-    with open("assets/heldisql.json", "w", encoding="utf-8") as jf:
-        json.dump(output, jf, indent=2, ensure_ascii=False)
-else:
-    print(json.dumps({"error": "No portable releases found or connection error."}, ensure_ascii=False))
+if __name__ == "__main__":
+    import json
+    
+    scraper = HeldiSqlScrape()
+    result = scraper.scrape()
+    
+    if result:
+        v2tuple = VersionHandling.v2tuple
+        
+        # Create data for Windows only
+        os_data = []
+        windows_data = []
+        
+        # Sort versions in descending order and create entries for each download
+        for v, downloads in sorted(result.items(), key=lambda x: v2tuple(x[0].lstrip('v')), reverse=True):
+            version = v.lstrip('v')
+            
+            # Add 64-bit version if available
+            if '64bit' in downloads:
+                windows_data.append({
+                    "version": version,
+                    "gpg": "",  # HeidiSQL doesn't provide GPG signatures
+                    "link": downloads['64bit']
+                })
+            
+            # Add 32-bit version if available
+            if '32bit' in downloads:
+                windows_data.append({
+                    "version": version,
+                    "gpg": "",  # HeidiSQL doesn't provide GPG signatures
+                    "link": downloads['32bit']
+                })
+        
+        os_data.append({"os": "Windows", "data": windows_data})
+        
+        output = {"heidisql": os_data}
+        
+        # Save to JSON file like mysql.py does
+        with open("assets/heldisql.json", "w", encoding="utf-8") as f:
+            json.dump(output, f, indent=2, ensure_ascii=False)
+        
+        print("Saved all HeidiSQL download info to assets/heldisql.json")
+        print(json.dumps(output, indent=2, ensure_ascii=False))
+    else:
+        print(json.dumps({"error": "No portable releases found or connection error."}, ensure_ascii=False))

@@ -4,13 +4,14 @@ from bs4 import BeautifulSoup
 import re
 from utils import VersionHandling
 import json
+import os
 
 class ApacheScrape:
     def __init__(self):
         self.url = "https://archive.apache.org/dist/httpd/"
         self.changelog_url = "https://www.apachelounge.com/Changelog-2.4.html"
         self.min_version = "2.4.51"
-        self.max_version = "2.4.63"
+        self.max_version = "2.4.65"
         self.last_v16_version = "2.4.57"
 
     def date_converter(self, text):
@@ -79,11 +80,19 @@ class ApacheScrape:
                             clean = re.sub(r'\.tar\.bz2$', '', clean)
                             results.append(clean)
             return results
-     
+    
 
     def scrape_changelog(self, html=None):
         """Scrape Apache versions and dates from changelog HTML."""
-        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3", "referer": "https://www.apachelounge.com/viewtopic.php?p=43274"}
+        header = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+            "referer": "https://www.apachelounge.com/viewtopic.php?p=43274",
+            "accept-language": "en-US,en;q=0.8",
+            "cache-control": "max-age=0",
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "upgrade-insecure-requests": "1",
+            "priority": "u=0, i"
+        }
         if html is None:
             rs = httpx.get(self.changelog_url, headers=header)
             html = rs.text
@@ -111,7 +120,7 @@ class ApacheScrape:
     def scrape(self, version_list=None, changelog_list=None):
         """
         Generate download links for each version using scrape_version and scrape_changelog.
-        Returns a list of dicts: {version, date, links: {vs17_win64, vs17_win32, vs16_win64, vs16_win32}}
+        Returns data in mysql.py format with multiple entries per version (like php.py).
         """
         v2tuple = VersionHandling.v2tuple
         # If not provided, get from methods
@@ -123,7 +132,8 @@ class ApacheScrape:
         # Build a map from version to date code
         version_date = {entry['version']: entry['date'] for entry in changelog_list if entry.get('date')}
 
-        results = []
+        # Collect all builds for all versions
+        builds_data = []
         for vstr in version_list:
             # vstr is like 'httpd-2.4.63', extract version
             m = re.match(r'httpd-(2\.4\.\d+)', vstr)
@@ -133,38 +143,86 @@ class ApacheScrape:
             date_code = version_date.get(version)
             if not date_code:
                 continue
-            # VS17 links (always)
-            vs17_win64 = f"https://www.apachelounge.com/download/VS17/binaries/httpd-{version}-{date_code}-win64-VS17.zip"
-            vs17_win32 = f"https://www.apachelounge.com/download/VS17/binaries/httpd-{version}-{date_code}-win32-VS17.zip"
-            # VS16 links (only for <= last_v16_version)
-            links = {
-                'vs17_win64': vs17_win64,
-                'vs17_win32': vs17_win32
-            }
-            if v2tuple(version) <= v2tuple(self.last_v16_version):
-                # VS16 links (note: path is lower-case 'vs16')
-                vs16_win64 = f"https://www.apachelounge.com/download/vs16/binaries/httpd-{version}-{date_code}-win64-vs16.zip"
-                vs16_win32 = f"https://www.apachelounge.com/download/vs16/binaries/httpd-{version}-{date_code}-win32-vs16.zip"
-                links['vs16_win64'] = vs16_win64
-                links['vs16_win32'] = vs16_win32
-            results.append({
-                'version': version,
-                'date': date_code,
-                'links': links
+            
+            # VS17 builds (always available)
+            builds_data.append({
+                "version": version,
+                "link": f"https://www.apachelounge.com/download/VS17/binaries/httpd-{version}-{date_code}-win64-VS17.zip"
             })
-        return results
+            builds_data.append({
+                "version": version,
+                "link": f"https://www.apachelounge.com/download/VS17/binaries/httpd-{version}-{date_code}-win32-VS17.zip"
+            })
+            
+            # VS16 builds (only for versions <= last_v16_version)
+            if v2tuple(version) <= v2tuple(self.last_v16_version):
+                builds_data.append({
+                    "version": version,
+                    "link": f"https://www.apachelounge.com/download/vs16/binaries/httpd-{version}-{date_code}-win64-vs16.zip"
+                })
+                builds_data.append({
+                    "version": version,
+                    "link": f"https://www.apachelounge.com/download/vs16/binaries/httpd-{version}-{date_code}-win32-vs16.zip"
+                })
+        
+        # Sort builds by version in descending order
+        def version_key(item):
+            v = item["version"]
+            return tuple(int(x) if x.isdigit() else 0 for x in v.split(".")) if v else (0,)
+        
+        sorted_builds = sorted(builds_data, key=version_key, reverse=True)
+        
+        # Create data for Windows only (Apache builds are Windows-specific from ApacheLounge)
+        os_data = []
+        
+        # Windows data (all builds)
+        windows_data = []
+        for build in sorted_builds:
+            windows_data.append({
+                "version": build["version"],
+                "gpg": "",  # Apache builds from ApacheLounge don't provide GPG signatures
+                "link": build["link"]
+            })
+        os_data.append({"os": "Windows", "data": windows_data})
+        
+        return {"apache": os_data}
 
-"https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.63-250207-win64-VS17.zip"
 if __name__ == "__main__":
     print("Scraping Apache versions...")
     scraper = ApacheScrape()
-    with open("test_changelog.txt", "r", encoding="utf-8") as f:
-        changelog_html = f.read()
+
+    # Try to load changelog HTML from file, else fetch and save it
+    changelog_path = "test_changelog.txt"
+    if os.path.exists(changelog_path):
+        with open(changelog_path, "r", encoding="utf-8") as f:
+            changelog_html = f.read()
+    else:
+        with httpx.Client() as session:
+            header = {
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+                "referer": "https://www.apachelounge.com/viewtopic.php?p=43274",
+                "accept-language": "en-US,en;q=0.8",
+                "cache-control": "max-age=0",
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+                "upgrade-insecure-requests": "1",
+                "priority": "u=0, i"
+            }
+            # First, go to a page that sets the cookies
+            session.get("https://www.apachelounge.com/viewtopic.php?p=43274")
+            # Then, fetch the changelog HTML and save for future use
+            changelog_html = session.get(scraper.changelog_url, headers=header).text
+            with open(changelog_path, "w", encoding="utf-8") as f:
+                f.write(changelog_html)
+
     version_list = scraper.scrape_version()
     changelog_list = scraper.scrape_changelog(html=changelog_html)  # Use real online data
-    results = scraper.scrape(version_list=version_list, changelog_list=changelog_list)
-    with open("apache.json", "w", encoding="utf-8") as jf:
-        json.dump(results, jf, indent=2)
-    print("Wrote apache.json")
+    result = scraper.scrape(version_list=version_list, changelog_list=changelog_list)
+    
+    # Save to JSON file like mysql.py does
+    with open("assets/apache.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    
+    print("Saved all Apache download info to assets/apache.json")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
 
     
